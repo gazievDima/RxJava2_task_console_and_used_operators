@@ -1,7 +1,9 @@
 package operators
 
+import operators.operators.*
+
 fun main() {
-    SwitchMap().operator()
+    Debounce().operator()
 
 
     //Потребуется для ожидания выполнения некоторых примеров
