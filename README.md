@@ -1,1 +1,1 @@
-## RxJava2 using some operators example
+## RxJava2 using some operators
