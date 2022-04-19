@@ -1,6 +1,3 @@
-package operators.task
-/*
-
 we have model Product(id: Int, name: String, price: Int, description: String)
 we have list products from server
 we have list products from cache (local database)
@@ -31,11 +28,11 @@ task use-cases:
 
 task presenter:
 - Presenter.kt, used use-cases for get list products
+    api:
+        getProducts(): List<Product> -
 
 task view:
 - View.kt, client code for used Presenter.kt
 
- */
-
-fun main() {
-}
+utils:
+- SimpleLiveData.kt, example use simple livedata
