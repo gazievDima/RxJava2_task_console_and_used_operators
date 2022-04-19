@@ -13,26 +13,18 @@ task sources:
 task repository:
 - GetListProductsRepository.kt, get list products
     -api:
-        getListProducts(): Single<List<Product>> - merge 2 flow from sources in one flow no repetitive
+        getListProducts(): Single<List<Product>> - merge 2 flow from sources in one flow
 
 task use-cases:
-- GetListProductsUseCase.kt, возвращает список продуктов по условию, разбитый по non-food, food
+- GetListProductsUseCase.kt, return list products to group by non-food, food
     -api:
-       getProducts(): List<Product> - get list products from sources without filtration
        getSortedProductsPriceComparator.up(): List<Product> - get sorted list to price from min to max
-       getSortedProductsPriceComparator.down(): List<Product> - get sorted list to price from max to min
        getSortedProductsNameComparator.up(): List<Product> - get sorted list to name from a to z
-       getSortedProductsNameComparator.down(): List<Product> - get sorted list to name from z to a
        getProductsFilterPrice.filterUp(minPrice: Int, maxPrice): List<Product> - get products with filter price from min to max
-       getProductsFilterPrice.filterDown(minPrice: Int, maxPrice): List<Product> - get products with filter price from max to min
 
 task presenter:
 - Presenter.kt, used use-cases for get list products
     api:
-        getProducts(): List<Product> -
-
-task view:
-- View.kt, client code for used Presenter.kt
-
-utils:
-- SimpleLiveData.kt, example use simple livedata
+        getSortedPriceUpProducts(): List<Product>
+        getSortedNameUpProducts(): List<Product>
+        getProductsFilterPriceUp(): List<Product>
