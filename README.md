@@ -1,1 +1,1 @@
-## RxJava2 using some operators
+## RxJava2 task console and used operators
